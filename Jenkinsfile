@@ -14,9 +14,6 @@ pipeline {
         }
         stage('Deploy') {
           steps {
-              sh 'git add myprogram.cpp'
-              sh 'git commit -m "Updated myprogram.cpp"'
-              sh 'git push'
               sh 'echo "Deployment completed successfully"'
           }
         }
