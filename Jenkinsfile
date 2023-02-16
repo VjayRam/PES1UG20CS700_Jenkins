@@ -24,7 +24,7 @@ pipeline {
             script {
                 def result = currentBuild.result
                 if (result == 'FAILURE') {
-                    echo 'Pipeline failed'
+                    sh 'echo "Pipeline failed"'
                 }
             }
         }
