@@ -20,13 +20,8 @@ pipeline {
     }
     
     post {
-        always {
-            script {
-                def result = currentBuild.result
-                if (result == 'FAILURE') {
-                    sh 'echo "Pipeline failed"'
-                }
-            }
+        failure {
+            echo 'Pipeline failed!!'
         }
     }
 }
